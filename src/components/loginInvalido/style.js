@@ -14,7 +14,7 @@ export const ContainerPopUP = styled.div`
     z-index: 1000;
     text-align: center;
     width:100%;
-    height:100vh;
+    height:100%;
     top: 0%;
 `;
 
@@ -23,10 +23,10 @@ export const DivFlexAlterada = styled(DivFlex)`
     padding: 40px;
     box-sizing: border-box;
     flex-direction: column;
+    background-color: rgba(255, 255,255, 0.98);
     top:50%;
     left:50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(255, 255,255, 0.8);
+    margin: auto 5px;
     width: 300px;
     color: black;
     span{
