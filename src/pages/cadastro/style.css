@@ -2,13 +2,14 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    max-width: 270px;
+    width: 270px;
     justify-content: center;
     align-items: flex-start;
-    background-color: #e7e7e736;
+    background-color: #bdbdbd36;
     padding: 50px 20px;
-    
   }
+
+
 
   .cadastro-h1{
     font-size: 30px;
@@ -23,7 +24,7 @@
   .forms input:not([type="checkbox"] ){
     padding: 10px;
     background-color: transparent;
-    border: 1px solid rgb(165, 165, 165);
+    border: 2px double rgba(199, 199, 199, 0.534);
     width: 100%;
     box-sizing: border-box;
   }
@@ -75,7 +76,7 @@
   
   .checkbox .error{
     margin: 3px 0px 0px 20px;
-    color: rgba(236, 240, 0, 0.774)
+    color: rgb(240, 42, 42)
   }
   
   .error{
@@ -84,7 +85,7 @@
     margin-bottom: 15px;
     margin-top: -8px;
     font-size: 10px;
-    color: rgba(236, 240, 0, 0.774)
+    color: rgb(240, 42, 42)
   }
   
   .error-senha:last-child{
@@ -99,3 +100,9 @@
     font-size: 10px;
   }
   
+  ul{
+    padding: 0px 0px 0px 5px;
+  }
+  ul li{
+    list-style: inside;
+  }
