@@ -1,6 +1,5 @@
 import './App.css';
 import Routes from "./routes"
-import PopupSenhaInvalida from './components/loginInvalido';
 import Header from "./components/header";
 
 function App() {

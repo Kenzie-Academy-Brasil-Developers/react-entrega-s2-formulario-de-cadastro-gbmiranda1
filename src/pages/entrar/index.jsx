@@ -5,6 +5,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { useHistory }  from 'react-router-dom'
 import {useState} from "react"
 import PopupSenhaInvalida from "../../components/loginInvalido"
+import { motion } from "framer-motion"
 
 
 function Entrar({usuarios}){
@@ -33,21 +34,28 @@ function Entrar({usuarios}){
 
 
     return(
-        <Container>
-            
-            {mostrarPopUp && <PopupSenhaInvalida setMostrarPopUp={setMostrarPopUp}></PopupSenhaInvalida>}
-            <form className="forms" onSubmit={handleSubmit(onSubmitFunction)}>
-                <h1 className="cadastro-h1">Entrar</h1>
-                <input placeholder="Usuário" type="text" {...register("username")}/>
-                <p className="error">{errors.username?.message}</p>
-                <input placeholder="Senha" type="password" {...register("password")} />
-                <p className="error">{errors.password?.message}</p>
-                <Button type="submit" className="button">Entrar</Button>
-                <Button onClick={() => history.push("/cadastrar")} className="button">Cadastrar</Button>
-            </form>
+        <motion.div
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            exit={{opacity: 0}}
+            transition={{duration: 1}}
+        >
+            <Container>
+                
+                {mostrarPopUp && <PopupSenhaInvalida setMostrarPopUp={setMostrarPopUp}></PopupSenhaInvalida>}
+                <form className="forms" onSubmit={handleSubmit(onSubmitFunction)}>
+                    <h1 className="cadastro-h1">Entrar</h1>
+                    <input placeholder="Usuário" type="text" {...register("username")}/>
+                    <p className="error">{errors.username?.message}</p>
+                    <input placeholder="Senha" type="password" {...register("password")} />
+                    <p className="error">{errors.password?.message}</p>
+                    <Button type="submit" className="button">Entrar</Button>
+                    <Button onClick={() => history.push("/cadastrar")} className="button">Cadastrar</Button>
+                </form>
 
-            
-        </Container>
+                
+            </Container>
+        </motion.div>
     )
 }
 

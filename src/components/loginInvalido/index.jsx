@@ -1,5 +1,4 @@
 import {DivFlex, ContainerPopUP, DivFlexAlterada} from "./style"
-import {useState} from "react"
 
 
 function PopupSenhaInvalida({setMostrarPopUp}){

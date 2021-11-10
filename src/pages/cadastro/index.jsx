@@ -4,6 +4,7 @@ import {Container} from "./style.js"
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useHistory }  from 'react-router-dom'
+import { motion } from "framer-motion"
 
 function Cadastrar({setUsers, usuarios}){
 
@@ -34,6 +35,12 @@ function Cadastrar({setUsers, usuarios}){
 
 
     return (
+      <motion.div
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            exit={{opacity: 0}}
+            transition={{duration: 1}}
+        >
         <Container >
           
           <form className="forms" onSubmit={handleSubmit(onSubmitFunction)}>
@@ -110,6 +117,7 @@ function Cadastrar({setUsers, usuarios}){
               <button className="button" onClick={()=> history.push("/")}>Voltar</button>
           </form>
         </Container>
+        </motion.div>
     )
 }
 
